@@ -53,4 +53,13 @@ logs/
 Thumbs.db
 .DS_Store
 
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache
+
 # Application files
+🏧 ATM Management System (AMS).md
