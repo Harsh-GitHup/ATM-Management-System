@@ -1,0 +1,17 @@
+Atm-management-system/
+├── app.py                 # Entry point for the application
+├── requirements.txt       # Dependencies (python packages)
+├── Dockerfile             # Dockerfile for the application
+├── docker-compose.yml     # Docker Compose configuration
+├── src/
+│   ├── __init__.py        # Defines the public interface for the 'src' package
+│   ├── ATM.py             # Main ATM class handling user interactions
+│   ├── BankService.py     # Business logic for banking operations
+│   ├── DatabaseManager.py # Handles database connections and queries
+│   └── ATM_Exceptions.py  # Custom exceptions for the ATM system
+├── schema/
+│   └── atm_schema.sql     # Database schema for the ATM system
+└── tests/
+    ├── __init__.py        # Defines the public interface for the 'tests' package
+    |-- test_atm.py        # Unit tests for the Main execution flow in main.py from root directory
+    └── test_atm_app.py    # Unit tests for the ATM class and all src package modules
