@@ -294,6 +294,6 @@ This project is created for educational and portfolio purposes.
 
 ***Harsh Kesharwani***
 
-- GitHub:
-- LinkedIn:
-- Portfolio:
+- GitHub: [Harsh-GitHup](https://github.com/Harsh-GitHup)
+- LinkedIn: [Harsh Kesharwani](https://www.linkedin.com/in/harshkesharwani)
+- Portfolio: [Harsh Kesharwani - Portfolio](https://harsh-githup.github.io/My-Portfolio)
