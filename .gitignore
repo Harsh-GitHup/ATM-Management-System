@@ -61,7 +61,7 @@ htmlcov/
 .nox/
 .cache
 # test files
-tests/test_atm_main-2.py
+tests/test_atm_main.py
 
 # Application files
 🏧 ATM Management System (AMS).md
