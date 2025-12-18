@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Service 1: The Database
+  db:
+    image: mysql:8.0
+    container_name: atm_db_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secure_root_password
+      MYSQL_DATABASE: atm_db
+    # Persistent volume so data survives container restarts
+    volumes:
+      - db_data:/var/lib/mysql
+      # Mount the schema file for automatic database initialization
+      - ./schema/atm_schema.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3307:3306" # Maps container port 3306 to localhost 3307 
+
+  # Service 2: The Python Application
+  app:
+    build: .
+    container_name: atm_app_container
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db                  # Points to the service name above
+      DB_USER: root
+      DB_PASSWORD: secure_root_password
+      DB_NAME: atm_db
+    stdin_open: true # Required for interactive input (input())
+    tty: true        # Required for interactive terminal
+
+volumes:
+  db_data:
